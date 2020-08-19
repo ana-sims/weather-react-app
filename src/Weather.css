@@ -1,34 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2");
+
+body {
+  font-family: "Baloo 2", cursive;
+}
+
 li {
   list-style-type: none;
 }
 
 .button-find {
   margin: 0 10px 0;
-  background-color: #d54162;
-  border-color: #d54162;
-}
-
-.search-button {
-  background-color: #0077b5;
-  border-color: #0077b5;
+  background-color: white;
+  color: #414141;
 }
 
 .city-name {
   color: #f9fcfb;
   font-weight: bold;
+  font-size: 50px;
+}
+
+.text-geo {
+  font-size: 20px;
+  color: #5fdde5;
+}
+
+.date-info,
+.time-info {
+  color: #5fdde5;
+}
+
+.text-clock,
+.text-calendar {
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+form {
+  margin: 15px 0px;
 }
 
 .temperature {
-  font-weight: bold;
-  font-size: 80px;
+  font-weight: 600;
+  font-size: 100px;
   color: #f9fcfb;
   line-height: 64px;
 }
 .unit {
   color: #6d757d;
-  font-size: 20px;
+  font-size: 25px;
   line-height: 1;
   position: relative;
-  top: -40px;
+  top: -45px;
   margin-left: 5px;
+}
+
+.info-text {
+  color: #5fdde5;
+  font-size: 20px;
+}
+
+.text-chevron {
+  font-size: 15px;
+  margin-right: 5px;
 }

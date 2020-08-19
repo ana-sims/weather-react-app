@@ -1,6 +1,20 @@
 .container {
   max-width: fit-content;
-  margin: 20px auto 10px;
-  padding: 30px;
+  margin: 20px auto 15px;
+  padding: 20px;
   background-color: #414141;
+}
+
+#signature {
+  color: #f9fcfb;
+  margin-top: 15px;
+}
+
+.text-signature {
+  color: #5fdde5;
+}
+
+.code {
+  color: #5fdde5;
+  margin-left: 5px;
 }
