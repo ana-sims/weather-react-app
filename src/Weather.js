@@ -7,7 +7,7 @@ export default function Weather() {
       <div className="row">
         <div className="col-4">
           <ul>
-            <li>Lisbon</li>
+            <li className="city-name">Lisbon</li>
             <li className="text-muted">22 August 2020</li>
             <li className="text-muted">12:00</li>
           </ul>
@@ -22,12 +22,15 @@ export default function Weather() {
               />
             </div>
             <div className="col-7">
-              <input type="Submit" value="Search" className="btn btn-info" />
               <input
                 type="Submit"
-                className="btn btn-info text-white shadow-lg"
-                value="My Location"
-                id="btn-link"
+                value="Search"
+                className="btn text-white shadow-lg search-button"
+              />
+              <input
+                type="Submit"
+                className="btn text-white shadow-lg button-find"
+                value="Find Me"
               />
             </div>
           </div>
@@ -35,14 +38,12 @@ export default function Weather() {
       </div>
       <div className="row">
         <div className="col-4">Image</div>
-        <div className="col-4">
-          <ul>
-            <li>Lisbon</li>
-            <li>28°C</li>
-          </ul>
+        <div className="col-4 temp-display">
+          <span className="temperature">28</span>
+          <span className="unit"> °C</span>
         </div>
         <div className="col-4">
-          <ul className="text-muted">
+          <ul>
             <li>Description</li>
             <li>Humidity</li>
             <li>Wind</li>

@@ -2,6 +2,33 @@ li {
   list-style-type: none;
 }
 
-#btn-link {
+.button-find {
   margin: 0 10px 0;
+  background-color: #d54162;
+  border-color: #d54162;
+}
+
+.search-button {
+  background-color: #0077b5;
+  border-color: #0077b5;
+}
+
+.city-name {
+  color: #f9fcfb;
+  font-weight: bold;
+}
+
+.temperature {
+  font-weight: bold;
+  font-size: 80px;
+  color: #f9fcfb;
+  line-height: 64px;
+}
+.unit {
+  color: #6d757d;
+  font-size: 20px;
+  line-height: 1;
+  position: relative;
+  top: -40px;
+  margin-left: 5px;
 }
