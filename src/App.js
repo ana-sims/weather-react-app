@@ -7,12 +7,13 @@ function App() {
   return (
     <div className="App">
       <div className="container rounded border border-white shadow">
-        <Weather />
+        <Weather city="" />
         <div className="Footer">
           <div id="signature">
             Open-source code by{" "}
             <a
               href="https://github.com/ana-sims/weather-react-app"
+              target="_blank"
               className="text-signature"
             >
               ana-sims
