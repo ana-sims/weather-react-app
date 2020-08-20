@@ -12,9 +12,14 @@
 
 .text-signature {
   color: #5fdde5;
+  margin-left: 3px;
 }
 
 .code {
   color: #5fdde5;
   margin-left: 5px;
+}
+
+.git {
+  margin-left: 3px;
 }
