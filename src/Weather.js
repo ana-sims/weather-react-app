@@ -5,13 +5,12 @@ import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 export default function Weather(props) {
-  let [ready, setReady] = useState(false);
-  let [weather, setWeather] = useState({});
+  let [weather, setWeather] = useState({ ready: false });
 
   function handleResponse(response) {
     console.log(response.data);
-    setReady(true);
     setWeather({
+      ready: true,
       temperature: Math.round(response.data.main.temp),
       humidity: Math.round(response.data.main.humidity),
       wind: Math.round(response.data.wind.speed),
@@ -26,7 +25,7 @@ export default function Weather(props) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.city}&units=metric&appid=${apiKey}`;
   axios.get(apiUrl).then(handleResponse);
 
-  if (ready) {
+  if (weather.ready) {
     return (
       <div>
         <div className="row">
