@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
-import Loader from "./Loader";
+import Loader from "react-loader-spinner";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 export default function Weather(props) {
   let [ready, setReady] = useState(false);
@@ -267,8 +268,8 @@ export default function Weather(props) {
           </form>
         </div>
         <div className="row">
-          <div className="col-12 text-center">
-            <Loader />
+          <div className="col-12 text-center loader-text">
+            <Loader type="Puff" color="#5fdde5" height={80} width={80} />
           </div>
         </div>
       </div>

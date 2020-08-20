@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <div className="container rounded border border-white shadow">
         <Weather city="" />
-        <div className="Footer">
+        <div className="Footer text-center">
           <div id="signature">
             Open-source code by{" "}
             <a

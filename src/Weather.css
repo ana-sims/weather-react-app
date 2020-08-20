@@ -64,3 +64,7 @@ form {
   font-size: 15px;
   margin-right: 5px;
 }
+
+.loader-text {
+  margin-top: 60px;
+}
