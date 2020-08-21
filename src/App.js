@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <div className="container rounded border border-secondary shadow-lg">
-        <Weather city="lisbon" />
+        <Weather defaultCity="lisbon" />
         <div className="Footer text-center">
           <div id="signature">
             Open-source code by

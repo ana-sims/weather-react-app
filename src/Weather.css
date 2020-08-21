@@ -9,10 +9,10 @@ li {
 }
 
 .button-find {
-  margin: 0 10px 0;
   background-color: white;
   color: #414141;
   border-color: white;
+  margin-left: 10px;
 }
 
 .city-name {
