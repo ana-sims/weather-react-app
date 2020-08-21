@@ -8,8 +8,8 @@ import Weather from "./Weather";
 function App() {
   return (
     <div className="App">
-      <div className="container rounded border border-white shadow">
-        <Weather city="" />
+      <div className="container rounded border border-secondary shadow-lg">
+        <Weather city="lisbon" />
         <div className="Footer text-center">
           <div id="signature">
             Open-source code by

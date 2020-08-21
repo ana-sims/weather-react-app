@@ -3,6 +3,7 @@ import axios from "axios";
 import "./Weather.css";
 import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import FormatDate from "./FormatDate";
 
 export default function Weather(props) {
   let [weather, setWeather] = useState({ ready: false });
@@ -15,13 +16,13 @@ export default function Weather(props) {
       humidity: Math.round(response.data.main.humidity),
       wind: Math.round(response.data.wind.speed),
       description: response.data.weather[0].description,
-      date: response.data.date,
+      date: new Date(response.data.dt * 1000),
       city: response.data.name,
       icon: response.data.weather[0].icon,
     });
   }
 
-  let apiKey = "9bc8a95bb24bea24e1011758969f01a6";
+  let apiKey = "01765686386f28dc4e5da49d03b1484d";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.city}&units=metric&appid=${apiKey}`;
   axios.get(apiUrl).then(handleResponse);
 
@@ -48,7 +49,6 @@ export default function Weather(props) {
                 {weather.city}
               </li>
               <li className="date-info">
-                {" "}
                 <svg
                   width="1em"
                   height="1em"
@@ -70,8 +70,8 @@ export default function Weather(props) {
                     d="M3.5 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5zm9 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5z"
                   />
                   <rect width="2" height="2" x="11" y="7" rx=".5" />
-                </svg>{" "}
-                {weather.date}
+                </svg>
+                <FormatDate date={weather.date} />
               </li>
               <li className="time-info">
                 <svg
@@ -90,8 +90,8 @@ export default function Weather(props) {
                     fill-rule="evenodd"
                     d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5z"
                   />
-                </svg>{" "}
-                12:00
+                </svg>
+                Time
               </li>
             </ul>
           </div>
@@ -120,7 +120,7 @@ export default function Weather(props) {
           </form>
         </div>
         <div className="row">
-          <div className="col-3">
+          <div className="col-3 text-right">
             <img
               src={`https://openweathermap.org/img/wn/${weather.icon}@2x.png`}
               alt={weather.description}
@@ -132,9 +132,8 @@ export default function Weather(props) {
             <span className="unit">°C</span>
           </div>
           <div className="col-4">
-            <ul className="info-text text-capitalize">
-              <li>
-                {" "}
+            <ul className="info-text">
+              <li className="text-capitalize">
                 <svg
                   width="1em"
                   height="1em"
@@ -180,7 +179,7 @@ export default function Weather(props) {
                     d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
                   />
                 </svg>
-                Wind: {weather.wind}km/h
+                Wind: {weather.wind} km/h
               </li>
             </ul>
           </div>
@@ -195,7 +194,6 @@ export default function Weather(props) {
           <div className="col-3">
             <ul>
               <li className="date-info">
-                {" "}
                 <svg
                   width="1em"
                   height="1em"
@@ -217,8 +215,7 @@ export default function Weather(props) {
                     d="M3.5 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5zm9 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5z"
                   />
                   <rect width="2" height="2" x="11" y="7" rx=".5" />
-                </svg>{" "}
-                {weather.date}
+                </svg>
               </li>
               <li className="time-info">
                 <svg
@@ -237,8 +234,7 @@ export default function Weather(props) {
                     fill-rule="evenodd"
                     d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5z"
                   />
-                </svg>{" "}
-                12:00
+                </svg>
               </li>
             </ul>
           </div>

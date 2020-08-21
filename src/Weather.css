@@ -12,6 +12,7 @@ li {
   margin: 0 10px 0;
   background-color: white;
   color: #414141;
+  border-color: white;
 }
 
 .city-name {
@@ -67,4 +68,10 @@ form {
 
 .loader-text {
   margin-top: 60px;
+}
+
+.weather-icon {
+  max-width: 200px;
+  position: relative;
+  top: -25px;
 }
