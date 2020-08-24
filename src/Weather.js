@@ -32,7 +32,8 @@ export default function Weather(props) {
   }
 
   function handleSubmit(event) {
-    event.prevent.default();
+    event.preventDefault();
+    console.log(city);
     searchCity();
   }
 
@@ -83,16 +84,16 @@ export default function Weather(props) {
               </div>
               <div className="col-2">
                 <input
-                  type="Submit"
-                  defaultValue="Search"
+                  type="submit"
+                  value="Search"
                   className="btn btn-outline-light shadow-lg"
                 />
               </div>
               <div className="col-2">
                 <input
-                  type="Submit"
+                  type="submit"
                   className="btn shadow-lg btn-outline-dark button-find"
-                  defaultValue="Find Me"
+                  value="Find Me"
                 />
               </div>
             </div>
