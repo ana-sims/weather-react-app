@@ -4,12 +4,12 @@ import "./Weather.css";
 export default function WeatherTemperature(props) {
   const [unit, setUnit] = useState("celsius");
 
-  function convertToCelsius(event) {
+  function showCelsius(event) {
     event.preventDefault();
     setUnit("celsius");
   }
 
-  function convertToFahrenheit(event) {
+  function showFahrenheit(event) {
     event.preventDefault();
     setUnit("fahrenheit");
   }
@@ -20,7 +20,7 @@ export default function WeatherTemperature(props) {
         <span className="temperature">{props.celsius}</span>
         <span className="unit">
           °C |
-          <a href="/" rel="noopener noreferrer" onClick={convertToFahrenheit}>
+          <a href="/" rel="noopener noreferrer" onClick={showFahrenheit}>
             ˚F
           </a>
         </span>
@@ -34,7 +34,7 @@ export default function WeatherTemperature(props) {
         </span>
         <span className="unit">
           °F |
-          <a href="/" rel="noopener noreferrer" onClick={convertToCelsius}>
+          <a href="/" rel="noopener noreferrer" onClick={showCelsius}>
             ˚C
           </a>
         </span>
