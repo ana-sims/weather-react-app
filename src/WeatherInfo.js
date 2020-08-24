@@ -1,22 +1,19 @@
 import React from "react";
+import WeatherIcon from "./WeatherIcon";
+import WeatherTemperature from "./WeatherTemperature";
 
 export default function WeatherInfo(props) {
   return (
     <div className="WeatherInfo">
       <div className="row">
-        <div className="col-3 text-right">
-          <img
-            src={`https://openweathermap.org/img/wn/${props.data.icon}@2x.png`}
-            alt={props.data.description}
-            className="weather-icon"
-          />
+        <div className="col-3">
+          <WeatherIcon code={props.data.icon} alt={props.data.description} />
         </div>
-        <div className="col-2 temp-display">
-          <span className="temperature">{props.data.temperature}</span>
-          <span className="unit">°C</span>
+        <div className="col-3 temp-display text-left">
+          <WeatherTemperature celsius={props.data.temperature} />
         </div>
-        <div className="col-4">
-          <ul className="info-text">
+        <div className="col-3">
+          <ul className="info-text text-left">
             <li className="text-capitalize">
               <svg
                 width="1em"

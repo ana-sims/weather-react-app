@@ -48,7 +48,7 @@ export default function Weather(props) {
         <div className="row">
           <div className="col-3">
             <ul>
-              <li className="city-name text-capitalize">
+              <li className="city-name text-capitalize text-left">
                 <svg
                   width="1em"
                   height="1em"

@@ -18,7 +18,7 @@ li {
 .city-name {
   color: #f9fcfb;
   font-weight: bold;
-  font-size: 50px;
+  font-size: 45px;
 }
 
 .text-geo {
@@ -48,7 +48,7 @@ form {
   line-height: 64px;
 }
 .unit {
-  color: #6d757d;
+  color: #f9fcfb;
   font-size: 25px;
   line-height: 1;
   position: relative;
@@ -71,7 +71,9 @@ form {
 }
 
 .weather-icon {
-  max-width: 200px;
-  position: relative;
-  top: -25px;
+  display: inline-block;
+}
+
+a {
+  color: #5fdde5;
 }
