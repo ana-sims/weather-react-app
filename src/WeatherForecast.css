@@ -1,0 +1,13 @@
+.temp {
+  color: #5fdde5;
+  font-weight: 800;
+  margin-top: 5px;
+  font-size: 20px;
+  font-family: "Baloo 2", cursive;
+}
+
+.date {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #f9fcfb;
+}

@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "./Weather.css";
 import Loader from "react-loader-spinner";
-import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import WeatherInfo from "./WeatherInfo";
 import FormatDate from "./FormatDate";
 import FormatTime from "./FormatTime";
+import WeatherForecast from "./WeatherForecast";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import "./Weather.css";
 
 export default function Weather(props) {
   const [weather, setWeather] = useState({ ready: false });
@@ -100,6 +101,7 @@ export default function Weather(props) {
           </form>
         </div>
         <WeatherInfo data={weather} />
+        <WeatherForecast city={weather.city} />
       </div>
     );
   } else {
@@ -108,6 +110,7 @@ export default function Weather(props) {
       <div className="row">
         <div className="col-12 text-center loader-text">
           <Loader type="Puff" color="#5fdde5" height={80} width={80} />
+          <div className="loading">Loading...</div>
         </div>
       </div>
     );

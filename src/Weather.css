@@ -9,9 +9,9 @@ li {
 }
 
 .button-find {
-  background-color: white;
+  background-color: #f9fcfb;
   color: #414141;
-  border-color: white;
+  border-color: #f9fcfb;
   margin-left: 10px;
 }
 
@@ -68,10 +68,12 @@ form {
 
 .loader-text {
   margin-top: 60px;
+  color: #5fdde5;
 }
-
-.weather-icon {
-  display: inline-block;
+.loading {
+  font-family: "Baloo 2", cursive;
+  font-size: 20px;
+  margin-top: 30px;
 }
 
 a {
