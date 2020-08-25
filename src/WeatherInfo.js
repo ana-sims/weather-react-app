@@ -1,12 +1,13 @@
 import React from "react";
 import WeatherIcon from "./WeatherIcon";
 import WeatherTemperature from "./WeatherTemperature";
+import "./Weather.css";
 
 export default function WeatherInfo(props) {
   return (
     <div className="WeatherInfo">
       <div className="row">
-        <div className="col-3 text-right">
+        <div className="col-4 text-right">
           <WeatherIcon
             code={props.data.icon}
             alt={props.data.description}
@@ -16,7 +17,7 @@ export default function WeatherInfo(props) {
         <div className="col-3 temp-display text-left">
           <WeatherTemperature celsius={props.data.temperature} />
         </div>
-        <div className="col-3">
+        <div className="col-5 weather-info align-left">
           <ul className="info-text text-left">
             <li className="text-capitalize">
               <svg

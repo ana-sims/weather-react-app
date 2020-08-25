@@ -8,21 +8,25 @@ li {
   list-style-type: none;
 }
 
+.row-top {
+  margin-top: 20px;
+}
+
 .button-find {
   background-color: #f9fcfb;
   color: #414141;
   border-color: #f9fcfb;
-  margin-left: 10px;
+  margin-left: 5px;
 }
 
 .city-name {
   color: #f9fcfb;
   font-weight: bold;
-  font-size: 45px;
+  font-size: 40px;
 }
 
 .text-geo {
-  font-size: 20px;
+  font-size: 15px;
   color: #5fdde5;
 }
 
@@ -38,7 +42,7 @@ li {
 }
 
 form {
-  margin: 15px 0px;
+  margin-top: 10px;
 }
 
 .temperature {
@@ -78,4 +82,12 @@ form {
 
 a {
   color: #5fdde5;
+}
+
+.row-middle {
+  margin-top: 20px;
+}
+
+.weather-info {
+  top: -15px;
 }

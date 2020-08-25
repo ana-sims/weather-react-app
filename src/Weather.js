@@ -46,8 +46,8 @@ export default function Weather(props) {
   if (weather.ready) {
     return (
       <div>
-        <div className="row">
-          <div className="col-3">
+        <div className="row row-top">
+          <div className="col-4 float-left">
             <ul>
               <li className="city-name text-capitalize text-left">
                 <svg
@@ -73,35 +73,41 @@ export default function Weather(props) {
               </li>
             </ul>
           </div>
-          <form onSubmit={handleSubmit}>
-            <div className="row">
-              <div className="col-7">
-                <input
-                  type="search"
-                  placeholder="Search for a city"
-                  className="form-control"
-                  onChange={handleCityChange}
-                />
+          <div className="col-8 float-right">
+            <form onSubmit={handleSubmit}>
+              <div className="row">
+                <div className="col-7">
+                  <input
+                    type="search"
+                    placeholder="Search for a city"
+                    className="form-control"
+                    onChange={handleCityChange}
+                  />
+                </div>
+                <div className="col-2 float-left">
+                  <input
+                    type="submit"
+                    value="Search"
+                    className="btn btn-outline-light shadow-lg button-search"
+                  />
+                </div>
+                <div className="col-1 align-right">
+                  <input
+                    type="submit"
+                    className="btn shadow-lg btn-outline-dark button-find"
+                    value="Find Me"
+                  />
+                </div>
               </div>
-              <div className="col-2">
-                <input
-                  type="submit"
-                  value="Search"
-                  className="btn btn-outline-light shadow-lg"
-                />
-              </div>
-              <div className="col-2">
-                <input
-                  type="submit"
-                  className="btn shadow-lg btn-outline-dark button-find"
-                  value="Find Me"
-                />
-              </div>
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
-        <WeatherInfo data={weather} />
-        <WeatherForecast city={weather.city} />
+        <div className="row-middle">
+          <WeatherInfo data={weather} />
+        </div>
+        <div className="row-bottom">
+          <WeatherForecast city={weather.city} />
+        </div>
       </div>
     );
   } else {
