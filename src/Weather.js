@@ -43,6 +43,19 @@ export default function Weather(props) {
     console.log(city);
   }
 
+  function retrievePosition(position) {
+    let lat = position.coords.latitude;
+    let lon = position.coords.longitude;
+    let apiKey = "e09b992b2268118729ef48d240afa69c";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+
+  function handleGeoLocation(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(retrievePosition);
+  }
+
   if (weather.ready) {
     return (
       <div>
@@ -96,6 +109,7 @@ export default function Weather(props) {
                     type="submit"
                     className="btn shadow-lg btn-outline-dark button-find"
                     value="Find Me"
+                    onClick={handleGeoLocation}
                   />
                 </div>
               </div>
