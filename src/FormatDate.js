@@ -1,7 +1,15 @@
 import React from "react";
 
 export default function FormatDate(props) {
-  let days = ["Sun", "Mon", "Tue", "Wednesday", "Thu", "Fri", "Sat"];
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
 
   let months = [
     "Jan",
