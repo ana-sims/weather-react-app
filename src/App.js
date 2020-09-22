@@ -22,7 +22,7 @@ function App() {
               ana-sims
               <FontAwesomeIcon className="git" icon={faGithub} />
             </a>
-            and hosted on{" "}
+            and hosted on
             <a
               href="https://dazzling-lalande-0fd064.netlify.app"
               target="_blank"
